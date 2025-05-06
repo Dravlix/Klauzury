@@ -1,0 +1,177 @@
+.openbtn{
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    display: block;
+    z-index: 100;
+}
+.closebtn{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: none;
+    z-index: 100;
+}
+.sidenav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #E3E3E3;
+    overflow: hidden;
+    transform-origin: top left;
+    opacity: 0;
+    z-index: -10;
+    pointer-events: none;
+}
+@media (orientation: portrait) and (max-width: 999px) {
+    @keyframes curtainIn {
+        0% {
+            transform: translateX(-100vw) skewY(10deg);
+            filter: blur(10px);
+            opacity: 0;
+        }
+        50% {
+            filter: blur(5px);
+        }
+        100% {
+            transform: translateX(0) skewY(0deg);
+            filter: blur(0);
+            opacity: 1;
+        }
+    }
+    
+    @keyframes curtainOut {
+        0% {
+            transform: translateX(0) skewY(0deg);
+            filter: blur(0);
+            opacity: 1;
+        }
+        50% {
+            filter: blur(5px);
+        }
+        100% {
+            transform: translateX(-100vw) skewY(10deg);
+            filter: blur(10px);
+            opacity: 0;
+        }
+    }
+    .sidenav.animate-open {
+        animation: curtainIn 0.5s ease-out forwards;
+        z-index: 50;
+        pointer-events: auto;
+    }
+    
+    .sidenav.animate-close {
+        animation: curtainOut 0.5s ease-in forwards;
+    }
+    .sidenav::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background: inherit;
+        transform-origin: top left;
+        pointer-events: none;
+        z-index: -1;
+    }
+    
+    /* zpozdění pro spodek */
+    .sidenav.animate-open::after {
+        animation: curtainIn 0.8s ease-out forwards;
+        animation-delay: 0.15s;
+    }
+    
+    .sidenav.animate-close::after {
+        animation: curtainOut 0.8s ease-in forwards;
+        animation-delay: 0.15s;
+    } 
+}
+
+
+
+
+.navbar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.navbarvrch img{
+    width: 247px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+.navbarvrch a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    font-size: 2.2rem;
+}
+.nav-btn{
+    text-decoration: none;
+    background: none;
+    border: none;
+    width: 43px;
+}
+.openbtn img{
+    width: 100%;
+}
+.closebtn img{
+    padding: 5px;
+    width: calc(100% - 10px);
+}
+.navbarvrch{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.navbarspodek{
+    width: 100%;
+    height: calc(30% - 40px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    margin-bottom: 40px;
+}
+.soc{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10%;
+    width: 40%;
+    text-decoration: none;
+}
+.soc img{
+    height: 100%;
+}
+.soc p{
+    font-size: 1.5rem;
+    color: black;
+}
+@media (orientation: landscape) and (min-width: 1000px) {
+    .navbarvrch img{
+        width: 240px;
+    }
+    .sidenav{
+        position: fixed;
+        width: 20vw;
+        z-index: 999;
+        opacity: 1;
+    }
+    .nav-btn{
+        display: none;
+    }
+}
+@media only screen and (min-width: 1000px) and (max-width: 1200px) and (orientation: landscape) {
+    .navbarvrch img{
+        width: 98%;
+    }
+}
