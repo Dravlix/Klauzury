@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dominik Tomeček</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="projekty.css">
+<link rel="stylesheet" href="nav.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+    <button id="toggleButton" class="openbtn nav-btn"><img src="img/hamburger.svg" alt=""></button>
+    <button id="closeButton" class="closebtn nav-btn"><img src="img/cross.png" alt=""></button>
+    <div class="sidenav">
+        <div class="navbar">
+            <div class="navbarvrch">
+                <img src="img/logo.png" alt="">
+                <a href="index.html">Úvod</a>
+                <a href="dovednosti.html">Dovednosti</a>
+                <a href="projekty.html">Projekty</a>
+                <a href="omne.html">O mně</a>
+                <a href="kontakty.html">Kontakty</a>
+            </div>
+            <div class="navbarspodek">
+                <a href="" class="soc">
+                    <img src="img/instagram_logo_bw.png" alt="">
+                    <p>Instagram</p>
+                </a>
+                <a href="" class="soc">
+                    <img src="img/gythub_logo.png" alt="">
+                    <p>Gythub</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="nav.js"></script>
+    <div class="body2">
+        <h1>Mé projekty</h1>
+        <div class="natlacitko">
+            <div>
+                <button class="seradit" id="openseradButton">Seřadit ></button>
+                <button class="seradit" id="closeseradButton">Seřadit <</button>
+                <button class="seraddiv" id="nejstarsi">Od nejstaršího</button>
+                <button class="seraddiv" id="nejmladsi">Od nejmladšího</button>
+                <button class="seraddiv" id="az">Od A do Z</button>
+                <button class="seraddiv" id="za">Od Z do A</button>
+            </div>
+            <div class="nafiltrovat">
+                <button class="filtrovat" id="openfiltrButton">Filtrovat ></button>
+                <button class="filtrovat" id="closefiltrButton">Filtrovat <</button>
+                <button class="filtrdiv" id="skolni">Školní</button>
+                <button class="filtrdiv" id="zakazky">Zakázky</button>
+                <button class="filtrdiv" id="osobni">Osobní</button>
+                <button class="filtrdiv" id="aplikace">Aplikace</button>
+                <button class="filtrdiv" id="hra">Hry</button>
+                <button class="filtrdiv" id="web">Weby</button>
+                <button class="filtrdiv" id="2024">2024</button>
+                <button class="filtrdiv" id="2020">2020</button>
+            </div>
+        </div>
+        <div id="naprojekty">
+            
+        </div>
+    </div>
+    <script src="filtr.js"></script>
+</body>
+</html>

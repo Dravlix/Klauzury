@@ -1,0 +1,87 @@
+[
+  {
+    "id": "witch",
+    "nazev": "Ahe Witch",
+    "rok": 2024,
+    "puvod": "Školní",
+    "typ": "Hra",
+    "popis_kratky": [
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+      "Etiam dictum tincidunt diam.",
+      "Sed ut perspiciatis unde omnis iste natus error."
+    ],
+    "popis_dlouhy": [
+      "Rigidbody2D, vlastní animace.",
+      "Ukládání progresu do local storage.",
+      "Použit vlastní grafický styl."
+    ],
+    "obrazek_uvodni": "img/zkouska.webp",
+    "obrazky_detail": [
+      "img/nasirkuz.png",
+      "img/naviskuz.png",
+      "img/naviskuz2.png",
+      "img/nasirkuz2.png"
+    ]
+  },
+  {
+    "id": "witcha",
+    "nazev": "Bhe ufo",
+    "rok": 2020,
+    "puvod": "Osobní",
+    "typ": "Aplikace",
+    "popis_kratky": [
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+      "Etiam dictum tincidunt diam.",
+      "Sed ut perspiciatis unde omnis iste natus error."
+    ],
+    "popis_dlouhy": [
+      "Rigidbody2D, vlastní animace.",
+      "Ukládání progresu do local storage.",
+      "Použit vlastní grafický styl.",
+      "Ukládání progresu do local storage.",
+      "Použit vlastní grafický styl.",
+      "Ukládání progresu do local storage.",
+      "Použit vlastní grafický styl.",
+      "Ukládání progresu do local storage.",
+      "Použit vlastní grafický styl.",
+      "Ukládání progresu do local storage.",
+      "Použit vlastní grafický styl.",
+      "Ukládání progresu do local storage.",
+      "Použit vlastní grafický styl."
+
+    ],
+    "obrazek_uvodni": "img/zkouska.webp",
+    "obrazky_detail": [
+      "img/nasirkuz.png",
+      "img/naviskuz.png",
+      "img/naviskuz2.png",
+      "img/nasirkuz2.png"
+    ]
+  },
+  {
+    "id": "witch",
+    "nazev": "Idk whit",
+    "rok": 2024,
+    "puvod": "Zakázky",
+    "typ": "Web",
+    "popis_kratky": [
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+      "Etiam dictum tincidunt diam.",
+      "Sed ut perspiciatis unde omnis iste natus error."
+    ],
+    "popis_dlouhy": [
+      "Rigidbody2D, vlastní animace.",
+      "Ukládání progresu do local storage.",
+      "Použit vlastní grafický styl."
+    ],
+    "obrazek_uvodni": "img/zkouska.webp",
+    "obrazky_detail": [
+      "img/nasirkuz.png",
+      "img/naviskuz.png",
+      "img/naviskuz2.png",
+      "img/nasirkuz2.png"
+    ]
+  }
+  
+]
+

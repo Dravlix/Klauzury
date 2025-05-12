@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+*{
+    font-family: Inconsolata;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+.body2{
+    width: 100vw;
+}
+.vrch{
+    margin: 10px;
+    width: calc(100% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    font-size: 3rem;
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+}
+.vrch img{
+    border-radius: 10px;
+    width: 70%;
+    filter: saturate(0%);
+}
+.vrch ul{
+    padding-left: 25px;
+}
+.konicky{
+    margin: 10px;
+    margin-top: 0px;
+    width: calc(100% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.konickyh2{
+    margin-top: 100px;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+}
+.konicky img{
+    width: 70%;
+    border-radius: 10px;
+    filter: saturate(0%);
+}
+.hudba{
+    margin: 10px;
+    margin-top: 0px;
+    width: calc(100% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hudba h3{
+    margin-bottom: 10px;
+    font-size: 2rem;
+    font-weight:300;
+}
+.hudba iframe{
+    border-radius:10px;
+    width: 100%;
+    height: 152px;
+    filter: saturate(0%);
+}
+.hudba > div{
+    width: 100%;
+}
+.hdoleva{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.hdoprava{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
