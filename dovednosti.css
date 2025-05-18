@@ -165,7 +165,7 @@ h1{
         width: 45%;
     }
     .dovednosti > img{
-        width: 15%;
+        width: 218px;
         height: auto;
     }
     .pod_obr{
@@ -200,5 +200,20 @@ h1{
     }
     .cs{
         background-image: url("img/cs_text.png");
+    }
+}
+@media (orientation: landscape) and (max-width: 1300px) {
+    .n-zarovnavac2{
+        display: none;
+    }
+    .n-zarovnavac{
+        display: block;
+    }
+    .n-obrazky1{
+        height: 100px;
+    }
+    .n-obrazky2{
+        width: 100%;
+        height: 100px;
     }
 }

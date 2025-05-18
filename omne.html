@@ -5,6 +5,7 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="omne.css">
 <link rel="stylesheet" href="nav.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
@@ -36,7 +37,7 @@
     <div class="body2">
         <h1>O mně</h1>
         <div class="vrch">
-            <ul>
+            <ul data-aos="fade-right">
                 <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam dictum tincidunt diam.</li>
                 <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam dictum tincidunt diam.</li>
                 <li>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</li>
@@ -44,9 +45,9 @@
             </ul>
             <img src="img/chc.webp" alt="">
         </div>
-        <h2 class="konickyh2">Moje koníčky</h2>
+        <h2 class="konickyh2" data-aos="fade-up">Moje koníčky</h2>
         <div class="konicky">
-            <ul>
+            <ul data-aos="fade-left">
                 <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam dictum tincidunt diam.</li>
                 <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam dictum tincidunt diam.</li>
                 <li>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</li>
@@ -54,24 +55,28 @@
             </ul>
             <img src="img/motorka.png" alt="">
         </div>
-        <h2 class="konickyh2">Hudba kterou poslouchám</h2>
+        <h2 class="konickyh2 hudbah2" data-aos="fade-up">Hudba kterou poslouchám</h2>
         <div class="hudba">
             <div class="hdoprava">
-                <h3>D&B</h3>
-                <img src="" alt="">
+                <h3 data-aos="fade-left">D&B</h3>
+                <img src="img/koleckoscarkou.svg" alt="" data-aos="fade-left">
                 <iframe src="https://open.spotify.com/embed/playlist/4azOUAX6Jaj5qMS708Krsg?utm_source=generator&theme=0" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
             <div class="hdoleva">
-                <h3>Lofi Chill</h3>
-                <img src="" alt="">
+                <h3 data-aos="fade-right">Lofi Chill</h3>
+                <img src="img/koleckoscarkou.svg" alt=""  data-aos="fade-left">
                 <iframe src="https://open.spotify.com/embed/playlist/679wCT6dVMDBxrYa5NcrXL?utm_source=generator&theme=0"  frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
             <div class="hdoprava">
-                <h3>K-Pop</h3>
-                <img src="" alt="">
+                <h3 data-aos="fade-left">K-Pop</h3>
+                <img src="img/koleckoscarkou.svg" alt="" data-aos="fade-left">
                 <iframe src="https://open.spotify.com/embed/playlist/5cT51cvsbYtmvNYMcnl0uI?utm_source=generator&theme=0" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
         </div>
     </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
-</html>
+</html> 

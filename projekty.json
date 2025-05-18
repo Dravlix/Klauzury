@@ -24,7 +24,7 @@
     ]
   },
   {
-    "id": "witcha",
+    "id": "witch",
     "nazev": "Bhe ufo",
     "rok": 2020,
     "puvod": "Osobní",
@@ -59,7 +59,7 @@
     ]
   },
   {
-    "id": "witch",
+    "id": "witcha",
     "nazev": "Idk whit",
     "rok": 2024,
     "puvod": "Zakázky",
@@ -73,6 +73,174 @@
       "Rigidbody2D, vlastní animace.",
       "Ukládání progresu do local storage.",
       "Použit vlastní grafický styl."
+    ],
+    "obrazek_uvodni": "img/zkouska.webp",
+    "obrazky_detail": [
+      "img/nasirkuz.png",
+      "img/naviskuz.png",
+      "img/naviskuz2.png",
+      "img/nasirkuz2.png"
+    ]
+  },
+  {
+    "id": "meduza",
+    "nazev": "Meduza Mystica",
+    "rok": 2023,
+    "puvod": "Školní",
+    "typ": "Aplikace",
+    "popis_kratky": [
+      "Aplikace pro správu úkolů a projektů.",
+      "Intuitivní rozhraní pro školní projekty.",
+      "Snadná integrace s Google kalendářem."
+    ],
+    "popis_dlouhy": [
+      "Mobilní aplikace pro správu školních úkolů.",
+      "Umožňuje připomínky a plánování termínů.",
+      "Synchronizace s cloudovými službami."
+    ],
+    "obrazek_uvodni": "img/zkouska.webp",
+    "obrazky_detail": [
+      "img/nasirkuz.png",
+      "img/naviskuz.png",
+      "img/naviskuz2.png",
+      "img/nasirkuz2.png"
+    ]
+  },
+  {
+    "id": "vcelka",
+    "nazev": "Včelí Úkolník",
+    "rok": 2022,
+    "puvod": "Osobní",
+    "typ": "Web",
+    "popis_kratky": [
+      "Vytvořte si seznam úkolů s vizuálním zobrazením.",
+      "Každý úkol je reprezentován včelkou.",
+      "Označujte splněné úkoly za pomocí jednoduchého kliknutí."
+    ],
+    "popis_dlouhy": [
+      "Včelí Úkolník umožňuje snadnou organizaci úkolů.",
+      "Každý úkol je přidán jako 'včelka', která má svůj úkol.",
+      "Přehledné rozhraní pro snadné přidávání, mazání a označování úkolů."
+    ],
+    "obrazek_uvodni": "img/zkouska.webp",
+    "obrazky_detail": [
+      "img/nasirkuz.png",
+      "img/naviskuz.png",
+      "img/naviskuz2.png",
+      "img/nasirkuz2.png"
+    ]
+  },
+  {
+    "id": "roza",
+    "nazev": "Růžový Svět",
+    "rok": 2021,
+    "puvod": "Zakázky",
+    "typ": "Web",
+    "popis_kratky": [
+      "Webová stránka s růžovým designem.",
+      "Přizpůsobitelné pozadí a barvy.",
+      "Mobilní optimalizace pro různé platformy."
+    ],
+    "popis_dlouhy": [
+      "Interaktivní webová stránka s možností přizpůsobení vzhledu.",
+      "Podpora pro různá témata a barevné schéma.",
+      "Responsivní design pro všechny mobilní zařízení."
+    ],
+    "obrazek_uvodni": "img/zkouska.webp",
+    "obrazky_detail": [
+      "img/nasirkuz.png",
+      "img/naviskuz.png",
+      "img/naviskuz2.png",
+      "img/nasirkuz2.png"
+    ]
+  },
+  {
+    "id": "ultraman",
+    "nazev": "Ultraman 3000",
+    "rok": 2025,
+    "puvod": "Osobní",
+    "typ": "Aplikace",
+    "popis_kratky": [
+      "Zábavná aplikace pro všechny věkové kategorie.",
+      "Hraní v reálném čase s možností soutěžení.",
+      "Téma futuristické války mezi roboty a mimozemšťany."
+    ],
+    "popis_dlouhy": [
+      "Aplikace pro mobilní zařízení, která nabízí akční hru s roboty.",
+      "Umožňuje uživatelům vytvářet vlastní robota a soutěžit v arénách.",
+      "Aplikace podporuje online multiplayer."
+    ],
+    "obrazek_uvodni": "img/zkouska.webp",
+    "obrazky_detail": [
+      "img/nasirkuz.png",
+      "img/naviskuz.png",
+      "img/naviskuz2.png",
+      "img/nasirkuz2.png"
+    ]
+  },
+  {
+    "id": "odin",
+    "nazev": "Odin's Adventure",
+    "rok": 2020,
+    "puvod": "Zakázky",
+    "typ": "Web",
+    "popis_kratky": [
+      "Webová stránka s dynamickými efekty.",
+      "Interaktivní animační prvky.",
+      "Téma norské mytologie."
+    ],
+    "popis_dlouhy": [
+      "Tato stránka používá dynamické efekty pro přechody a animace.",
+      "Téma se zaměřuje na norské mytologické postavy a příběhy.",
+      "Webová stránka nabízí interaktivní prozkoumání světa Odina."
+    ],
+    "obrazek_uvodni": "img/zkouska.webp",
+    "obrazky_detail": [
+      "img/nasirkuz.png",
+      "img/naviskuz.png",
+      "img/naviskuz2.png",
+      "img/nasirkuz2.png"
+    ]
+  },
+  {
+    "id": "luna",
+    "nazev": "Luna Exploration",
+    "rok": 2026,
+    "puvod": "Osobní",
+    "typ": "Aplikace",
+    "popis_kratky": [
+      "Vesmírná aplikace pro objevování lunární krajiny.",
+      "Přehled lunární mapy a měsíčního povrchu.",
+      "Simulace lunárního expedice."
+    ],
+    "popis_dlouhy": [
+      "Aplikace pro mobilní zařízení zaměřená na vesmírné výzkumy.",
+      "Umožňuje uživatelům prozkoumat lunární krajinu.",
+      "Přehledné zobrazení historických i aktuálních dat o Měsíci."
+    ],
+    "obrazek_uvodni": "img/zkouska.webp",
+    "obrazky_detail": [
+      "img/nasirkuz.png",
+      "img/naviskuz.png",
+      "img/naviskuz2.png",
+      "img/nasirkuz2.png"
+    ]
+  },
+  {
+    "id": "jungle",
+    "nazev": "Jungle Explorer",
+    "rok": 2023,
+    "puvod": "Školní",
+    "typ": "Web",
+    "popis_kratky": [
+      "Webová aplikace pro prozkoumávání tropické džungle.",
+      "Učení o různých druzích flóry a fauny.",
+      "Interaktivní mapa s informacemi o zvířatech."
+    ],
+    "popis_dlouhy": [
+      "Aplikace je určena pro školní výuku přírody a biologie.",
+      "Nabízí interaktivní prozkoumání tropických zvířat a rostlin.",
+      "Podporuje výukové materiály pro učitele a studenty."
     ],
     "obrazek_uvodni": "img/zkouska.webp",
     "obrazky_detail": [

@@ -25,7 +25,7 @@
     z-index: -10;
     pointer-events: none;
 }
-@media (orientation: portrait) and (max-width: 999px) {
+@media (orientation: portrait) and (max-width: 1000px) {
     @keyframes curtainIn {
         0% {
             transform: translateX(-100vw) skewY(10deg);
@@ -165,6 +165,7 @@
         width: 20vw;
         z-index: 50;
         opacity: 1;
+        pointer-events: auto;
     }
     .nav-btn{
         display: none;

@@ -166,6 +166,10 @@ h1{
 }
 .naobrazky{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .navisku{
     display: flex;
@@ -174,7 +178,7 @@ h1{
 .navisku img{
     width: 50%;
 }
-.naobrazky > img{
+.naobrazky .doprostreddavac > img{
     width: 100%;
 }
 #naprojekty{
@@ -202,6 +206,7 @@ h1{
         height: auto;
         padding: 20px;
         padding-bottom: 50px;
+        scroll-margin-top: 20vh;
     }
     .natext{
         width: 55%;
@@ -235,6 +240,8 @@ h1{
         height: 80vh;
         display: flex;
         flex-direction: row-reverse;
+        border: 2px solid black;
+        border-radius: 30px;
     }
     .naobrazky{
         width: 35%;
@@ -243,5 +250,19 @@ h1{
     .neobrazky{
         width: 65%;
         height: 100%;
+    }
+    .bilepozadi{
+        top: 0;
+        left: -20vw;
+        width: 100vw;
+        opacity: 0.7;
+    }
+    .krizek{
+        margin-top: 10vh;
+        margin-right: 5vw;
+    }
+    .doprostreddavac{
+        margin: 0px 10px;
+        width: calc(100% - 20PX);
     }
 }

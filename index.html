@@ -5,6 +5,7 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="uvod.css">
 <link rel="stylesheet" href="nav.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
@@ -49,21 +50,25 @@
                 <img src="img/sipka_dolu.svg" alt="">
             </a>
         </div>
-        <h2 class="kdo-n" id="kdo-n">Kdo jsem</h2>
+        <h2 class="kdo-n" id="kdo-n" data-aos="fade-down">Kdo jsem</h2>
         <div class="kdo">
-            <div>
+            <div data-aos="fade-right">
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer in sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.</p>
             </div>
-            <div>
+            <div data-aos="fade-up">
                 <p>Mauris dolor felis, sagittis at, luctus sed, aliquam non, tellus. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Nullam dapibus fermentum ipsum. Phasellus rhoncus.</p>
             </div>
-            <div>
+            <div data-aos="fade-left">
                 <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas libero. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
             </div>
         </div>
-        <h2 class="dov-n">Dovednosti</h2>
-        <div class="dov-center">
+        <h2 class="dov-n" data-aos="fade-up">Dovednosti</h2>
+        <div class="dov-center" data-aos="fade-up">
             <div class="dov">
+                <div class="natlacitka">
+                    <button class="toleft"></button>
+                    <button class="toright"></button>
+                </div>
                 <div class="dovscrl" id="dovscrl">
                     <img src="img/html.png" alt="" id="html">
                     <img src="img/css.png" alt="" id="css">
@@ -73,33 +78,44 @@
                 </div>
             </div>
         </div>
-        <div class="dovbtnhldr">
-            <div id="htmltx" class="hidden"><a href="">Já a HTML</a></div>
-            <div id="csstx" class="hidden"><a href="">Já a CSS</a></div>
-            <div id="jstx" class="hidden"><a href="">Já a JavaScript</a></div>
-            <div id="pythontx" class="hidden"><a href="">Já a Python</a></div>
-            <div id="cstx" class="hidden"><a href="">Já a C#</a></div>
+        <div class="dovbtnhldr" data-aos="fade-down">
+            <button class="toleft"><img src="img/sipka_dolu.svg" alt=""></button>
+            <div id="htmltx" class="hidden"><a href="dovednosti.html#html">Já a HTML</a></div>
+            <div id="csstx" class="hidden"><a href="dovednosti.html#css">Já a CSS</a></div>
+            <div id="jstx" class="hidden"><a href="dovednosti.html#js">Já a JavaScript</a></div>
+            <div id="pythontx" class="hidden"><a href="dovednosti.html#python">Já a Python</a></div>
+            <div id="cstx" class="hidden"><a href="dovednosti.html#cs">Já a C#</a></div>
+            <button class="toright"><img src="img/sipka_dolu.svg" alt=""></button>
         </div>
         <script src="dov.js"></script>
-        <h2 class="posp-n">Poslední projekt</h2>
+        <h2 class="posp-n" data-aos="fade-up">Poslední projekt</h2>
         <div class="posp">
             <div class="natext">
-                <h3>The Witch</h3>
-                <ul>
+                <h3 data-aos="fade-right">The Witch</h3>
+                <ul data-aos="fade-right">
                     <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam dictum tincidunt diam.</li>
                     <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam dictum tincidunt diam.</li>
                     <li>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</li>
                 </ul>
             </div>
             <div class="netext">
-                <img src="img/zkouska.webp" alt="">
+                <img src="img/zkouska.webp" alt="" data-aos="fade-left">
                 <div class="navice">
-                    <div class="vice">
-                        <a href="">Vydět více</a>
-                    </div>
+                    <button class="vice" id="nevest" data-aos="fade-down">
+                        Vydět více
+                    </button>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        document.getElementById('nevest').addEventListener('click', () => {
+          window.location.href = 'projekty.html#projekt-vcelka';
+        });
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

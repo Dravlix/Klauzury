@@ -27,9 +27,9 @@ closeseradButton.addEventListener('click', () => {
 
 
 let projektyData = [];
-let aktivniPuvody = new Set(["Školní", "Zakázky", "Osobní"]);
-let aktivniRoky = new Set([2020, 2024]);
-let aktivniTypy = new Set(["Hra", "Web", "Aplikace"]);
+let aktivniPuvody = new Set(); // byl: new Set(["Školní", "Zakázky", "Osobní"]);
+let aktivniRoky = new Set();   // byl: new Set([2020, 2021, 2022, 2023, 2024, 2025, 2026]);
+let aktivniTypy = new Set();   // byl: new Set(["Hra", "Web", "Aplikace"]);
 let posledniSerazeni = null;
 
 // ← PŘIDÁNO: Mapování id tlačítka na hodnotu v JSONu
@@ -38,7 +38,12 @@ const mapFilterValue = {
   zakazky:  "Zakázky",
   osobni:   "Osobní",
   "2020":   2020,
+  "2021":   2021,
+  "2022":   2022,
+  "2023":   2023,
   "2024":   2024,
+  "2025":   2025,
+  "2026":   2026,
   hra:      "Hra",
   web:      "Web",
   aplikace: "Aplikace"
@@ -46,12 +51,14 @@ const mapFilterValue = {
 
 document.addEventListener("DOMContentLoaded", () => {
   fetch("projekty.json")
-    .then(res => res.json())
-    .then(data => {
-      projektyData = data;
-      nastavFiltry();
-      seradit("nejmladsi");
-    });
+  .then(res => res.json())
+  .then(data => {
+    projektyData = data;
+    nastavFiltry();
+    seradit("nejmladsi");
+
+  });
+
 
   document.getElementById("nejstarsi").addEventListener("click", () => seradit("nejstarsi"));
   document.getElementById("nejmladsi").addEventListener("click", () => seradit("nejmladsi"));
@@ -59,9 +66,29 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("za").addEventListener("click", () => seradit("za"));
 });
 
+
+function scrollToHashIfNeeded(retryCount = 10) {
+  const hash = window.location.hash;
+  console.log("Hash:", hash); // Zobrazí aktuální hash
+  if (!hash || retryCount <= 0) return;
+
+  const el = document.querySelector(hash);
+  if (el) {
+    console.log("Prvek nalezen, scrollujeme na něj!");
+    el.scrollIntoView({ behavior: 'smooth' });
+  } else {
+    console.log("Prvek nenalezen, pokusíme se znovu...");
+    setTimeout(() => scrollToHashIfNeeded(retryCount - 1), 100);
+  }
+}
+
+
+
+
+
 function nastavFiltry() {
   document.querySelectorAll(".filtrdiv").forEach(btn => {
-    btn.style.backgroundColor = "#000"; // všechna tlačítka zapnutá
+    btn.style.backgroundColor = "#747272"; // všechna tlačítka zapnutá
     btn.addEventListener("click", () => {
       // ← ZMĚNA: bere se ID tlačítka, ne jeho text
       const key = btn.id;
@@ -106,10 +133,11 @@ function seradit(typ) {
   posledniSerazeni = typ;
 
   let filtrovano = projektyData.filter(p =>
-    aktivniPuvody.has(p.puvod) &&
-    aktivniRoky.has(p.rok) &&
-    aktivniTypy.has(p.typ)
-  );
+  (aktivniPuvody.size === 0 || aktivniPuvody.has(p.puvod)) &&
+  (aktivniRoky.size === 0 || aktivniRoky.has(p.rok)) &&
+  (aktivniTypy.size === 0 || aktivniTypy.has(p.typ))
+);
+
 
   switch (typ) {
     case "nejstarsi":  filtrovano.sort((a,b)=>a.rok-b.rok); break;
@@ -123,6 +151,8 @@ function seradit(typ) {
   if (akt) akt.style.backgroundColor = '#000';
 
   zobrazProjekty(filtrovano);
+
+
 }
 
 function zobrazProjekty(projekty) {
@@ -130,14 +160,14 @@ function zobrazProjekty(projekty) {
   c.innerHTML = "";
   projekty.forEach(p => {
     c.insertAdjacentHTML("beforeend", `
-      <div class="posp">
+      <div class="posp" id="projekt-${p.id}">
         <div class="natext">
-          <h3>${p.nazev}</h3>
-          <ul>${p.popis_kratky.map(x=>`<li>${x}</li>`).join("")}</ul>
+          <h3 data-aos="fade-right">${p.nazev}</h3>
+          <ul data-aos="fade-right">${p.popis_kratky.map(x=>`<li>${x}</li>`).join("")}</ul>
         </div>
         <div class="netext">
-          <img src="${p.obrazek_uvodni}" alt="${p.nazev}">
-          <div class="navice"><div class="vice">
+          <img src="${p.obrazek_uvodni}" alt="${p.nazev}" data-aos="fade-left">
+          <div class="navice"><div class="vice" data-aos="fade-down">
             <a href="#" onclick="zobrazDetail('${p.id}')">Vidět více</a>
           </div></div>
         </div>
@@ -158,22 +188,30 @@ function zobrazProjekty(projekty) {
             <ul>${p.popis_dlouhy.map(x=>`<li>${x}</li>`).join("")}</ul>
           </div>
           <div class="naobrazky">
-            <img src="${p.obrazky_detail[0]}">
-            <div class="navisku">
-              <img src="${p.obrazky_detail[1]}">
-              <img src="${p.obrazky_detail[2]}">
-            </div>
-            <img src="${p.obrazky_detail[3]}">
+            <div class="doprostreddavac">
+              <img src="${p.obrazky_detail[0]}">
+              <div class="navisku">
+                <img src="${p.obrazky_detail[1]}">
+                <img src="${p.obrazky_detail[2]}">
+              </div>
+              <img src="${p.obrazky_detail[3]}">
+              </div>
           </div>
         </div>
       </div>
     `);
   });
+
+  window.requestAnimationFrame(() => scrollToHashIfNeeded());
 }
 
 function zobrazDetail(id) {
   document.getElementById(`popup-${id}`).style.display = "block";
   document.body.style.overflow = 'hidden';
+
+
+  window.location.hash = id; // ← TOHLE ZAJISTÍ, ŽE PO OTEVŘENÍ DETAILU SE HASH V URL UPRAVÍ
+  window.requestAnimationFrame(scrollToHashIfNeeded);
 }
 function zavritDetail(id) {
   document.getElementById(`popup-${id}`).style.display = "none";

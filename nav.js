@@ -2,8 +2,14 @@ const toggleButton = document.getElementById('toggleButton');
 const closeButton = document.getElementById('closeButton');
 const sidenav = document.querySelector('.sidenav');
 
+// Funkce pro zjištění, jestli je orientace portrait
+function isPortrait() {
+    return window.matchMedia("(orientation: portrait)").matches;
+}
+
 toggleButton.addEventListener('click', () => {
-    // Nastav top na aktuální scroll pozici
+    if (!isPortrait()) return; // Pokud není portrait, neprováděj kód
+
     sidenav.style.top = `${window.scrollY}px`;
 
     sidenav.classList.remove('animate-close');
@@ -16,8 +22,9 @@ toggleButton.addEventListener('click', () => {
     document.body.style.overflow = 'hidden';
 });
 
-
 closeButton.addEventListener('click', () => {
+    if (!isPortrait()) return; // Taky kontrola při zavírání
+
     sidenav.classList.remove('animate-open');
     sidenav.classList.add('animate-close');
 
@@ -25,7 +32,6 @@ closeButton.addEventListener('click', () => {
     toggleButton.style.display = 'block';
     document.body.style.overflow = '';
 
-    // Počkej na konec animace a schovej
     setTimeout(() => {
         sidenav.classList.remove('animate-close');
         sidenav.style.zIndex = -10;

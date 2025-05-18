@@ -95,3 +95,46 @@ h1{
     color: black;
     margin-left: 10px;
 }
+@media (orientation: landscape) and (min-width: 1000px) {
+    body{
+        display: flex;
+    }
+    
+    .body2{
+        width: 80vw;
+        margin-left: 20vw;
+    }
+    h1{
+        font-size: 4rem;
+    }
+    .kontakt-block{
+        width: 750px;
+    }
+    .odeslat{
+        height: 40px;
+        width: 100px;
+        border-radius: 100px;
+        font-size: 1.2rem;
+    }
+    .odkazyvrch{
+        justify-content: center;
+    }
+    .odkazyvrch div{
+        margin: 10px 50px;
+    }
+    .kontakt-block p{
+        font-size: 1.2rem;
+    }
+    .kontakt-block input{
+        font-size: 1.2rem;
+    }
+    .kontakt-block textarea{
+        font-size: 1.2rem;
+    }
+    .jednor{
+        height: 30px;
+    }
+    .odkazy a{
+        font-size: 1.2rem;
+    }
+}

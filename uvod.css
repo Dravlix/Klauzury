@@ -123,7 +123,20 @@ body{
     height: 100%;
     animation: bounce 2s ease-in-out infinite;
 }
-
+.natlacitka{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    height: 230px;
+}
+.natlacitka button{
+    width: 50%;
+    height: 100%;
+    background: none;
+    border: none;
+}
 
 /* Klíčové snímky pro přirozený pohyb */
 @keyframes bounce {
@@ -194,6 +207,7 @@ body{
     scroll-behavior: smooth;
     padding: 15px;
 }
+
 .dovscrl::-webkit-scrollbar {
     display: none;
   }
@@ -210,8 +224,9 @@ body{
     width: 100%;
     height: 50px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-around;
 }
 .dovbtnhldr div{
     height: 100%;
@@ -226,7 +241,23 @@ body{
     text-decoration: none;
     color: black;
 }
-
+.dovbtnhldr button{
+    background: none;
+    border: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dovbtnhldr button img{
+    height: 80%;
+}
+.toleft{
+    transform: rotate(90deg);
+}
+.toright{
+    transform: rotate(-90deg)
+} 
 .posp-n{
     margin-top: 200px;
     margin-bottom: 40px;
@@ -287,9 +318,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.vice a{
-    text-decoration: none;
     color: white;
     font-size: 1.3rem;
 }
@@ -389,6 +417,9 @@ body{
     .dov{
         width: 920px ;
     }
+    .dovbtnhldr{
+        justify-content: center;
+    }
     .dovbtnhldr div{
         width: 20%;
     }
@@ -426,6 +457,16 @@ body{
     .dov-center{
         width: 100%;
     }
+    .toleft{
+        margin-right: 10%;
+    }
+    .toright{
+        margin-left: 10%;
+    }
+    .natlacitka{
+        width: 920px;
+    }
+
 }
 @media only screen and (min-width: 1000px) and (max-width: 1200px) and (orientation: landscape) {
     .dov{
