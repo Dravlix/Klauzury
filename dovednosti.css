@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+*{
+    font-family: Inconsolata;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+.body2{
+    width: 100vw;
+}
+h1{
+    text-align: center;
+    margin: 10px;
+    margin-bottom: 15px;
+    font-size: 3rem;
+}
+.nadpis{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+.nadpis img{
+    height: 100%;
+    filter: saturate(0%);
+}
+.nadpis img:hover{
+    filter: saturate(60%);
+    transition: all 0.5s ease-in-out;
+}
+.nadpis a{
+    height: 100%;
+}
+.n-obrazky1{
+    height: 75px;
+    width: 100%;
+    justify-content: space-around;
+    display: flex;
+}
+.n-obrazky2{
+    height: 75px;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+}
+.n-zarovnavac{
+    height: 100%;
+}
+.dovednosti{
+    margin: 10px;
+    margin-top: 140px;
+    width: calc(100%-20px);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-margin-top: 5vh;
+}
+.html{
+    background-image: url("img/html_text_rt.png");
+}
+.dovednosti h2{
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+}
+.dovednosti img{
+    height: 170px;
+    filter: saturate(0.2);
+}
+.dovednosti img:hover{
+    transition: all 0.5s ease-in-out;
+    filter: saturate(1);
+}
+.dovednosti p{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.pod_obr{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.dovednosti h3{
+    font-size: 2rem;
+    margin: 10px;
+    margin-top: 0px;
+}
+.Jak_dovednosti{
+    margin-bottom: 0px;
+}
+.nabar{
+    margin: 5px 40px;
+    width: calc(100% - 80px);
+    background-color: rgb(65, 64, 64);
+    border: 7px solid rgb(29, 29, 29);
+    height: 25px;
+}
+.bar{
+    background-color: white;
+    height: 100%;
+}
+.bar-html{
+    width: 98%;
+}
+.css{
+    background-image: url("img/css_text_rt.png");
+}
+.bar-css{
+    width: 70%;
+}
+.js{
+    background-image: url("img/javascript_text_rt.png");
+}
+.bar-js{
+    width: 10%;
+}
+.python{
+    background-image: url("img/python_text_rt.png");
+}
+.bar-python{
+    width: 60%;
+}
+.cs{
+    background-image: url("img/cs_text_rt.png");
+}
+.bar-cs{
+    width: 40%;
+}
+.n-zarovnavac2{
+    display: none;
+}
+@media (orientation: landscape) and (min-width: 1000px) {
+    .body2{
+        width: 80vw;
+        margin-left: 20vw;
+    }
+    .nadpis h1{
+        font-size: 5rem;
+    }
+    .n-zarovnavac{
+        display: none;
+    }
+    .n-zarovnavac2{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 200px;
+    }
+    .n-zarovnavac2 img{
+        height: 200px;
+    }
+    .n-obrazky2{
+        width: 60%;
+        margin-top: 40px;
+    }
+    .dovednosti{
+        flex-direction: row;
+        margin: 40px;
+        width: calc(100% - 80px);
+        margin-top: 100px;
+    }
+    .popis-dov{
+        width: 45%;
+    }
+    .dovednosti > img{
+        width: 218px;
+        height: auto;
+    }
+    .pod_obr{
+        width: 40%;
+        margin-top: 40px;
+    }
+    .nabar{
+        width: 60%;
+    }
+    .dovednosti h3{
+        font-size: 4rem;
+        margin-top: -15px;
+        margin-bottom: 0px;
+    }
+    .css{
+    background-image: url("img/css_text.png");
+    }
+    .html{
+        background-image: url("img/html_text.png");
+    }
+    .js{
+        background-image: url("img/javascript_text.png");
+    }
+    .bar-js{
+        width: 10%;
+    }
+    .python{
+        background-image: url("img/python_text.png");
+    }
+    .bar-python{
+        width: 60%;
+    }
+    .cs{
+        background-image: url("img/cs_text.png");
+    }
+}
+@media (orientation: landscape) and (max-width: 1300px) {
+    .n-zarovnavac2{
+        display: none;
+    }
+    .n-zarovnavac{
+        display: block;
+    }
+    .n-obrazky1{
+        height: 100px;
+    }
+    .n-obrazky2{
+        width: 100%;
+        height: 100px;
+    }
+}

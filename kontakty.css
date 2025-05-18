@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+*{
+    font-family: Inconsolata;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+.body2{
+    width: 100vw;
+}
+h1{
+    font-size: 3rem;
+    width: 100%;
+    text-align: center;
+    margin-top: 60px;
+}
+.rovnou{
+    margin: 20px;
+    width: calc(100% - 40px);
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+.kontakt-block{
+    width: 100%;
+}
+.jednor{
+    width: calc(100% - 25px);
+    background-color: #E6E6E6;
+    border: none;
+    height: 25px;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 10px;
+}
+.kontakt-block p{
+    margin-bottom: 7px;
+    margin-top: 20px;
+}
+.zprava{
+    width: calc(100% - 25px);
+    background-color: #E6E6E6;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 10px 10px 15px;
+}
+.naodeslat{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.odeslat{
+    background-color: #8D8D8D;
+    color: white;
+    height: 25px;
+    width: 70px;
+    border: none;
+    border-radius: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.odeslat:hover{
+    background-color: rgb(29, 29, 29);
+    transition: all 0.2s ease-in-out;
+}
+.odkazy{
+    width: calc(100% - 20px);
+    margin: 10px;
+    margin-top: 100px;
+}
+.odkazyvrch{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.odkazyspodek{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.odkazy img{
+    width: 50px;
+}
+.odkazy > div > div{
+    display: flex;
+    align-items: center;
+}
+.odkazy a{
+    text-decoration: none;
+    color: black;
+    margin-left: 10px;
+}
+@media (orientation: landscape) and (min-width: 1000px) {
+    body{
+        display: flex;
+    }
+    
+    .body2{
+        width: 80vw;
+        margin-left: 20vw;
+    }
+    h1{
+        font-size: 4rem;
+    }
+    .kontakt-block{
+        width: 750px;
+    }
+    .odeslat{
+        height: 40px;
+        width: 100px;
+        border-radius: 100px;
+        font-size: 1.2rem;
+    }
+    .odkazyvrch{
+        justify-content: center;
+    }
+    .odkazyvrch div{
+        margin: 10px 50px;
+    }
+    .kontakt-block p{
+        font-size: 1.2rem;
+    }
+    .kontakt-block input{
+        font-size: 1.2rem;
+    }
+    .kontakt-block textarea{
+        font-size: 1.2rem;
+    }
+    .jednor{
+        height: 30px;
+    }
+    .odkazy a{
+        font-size: 1.2rem;
+    }
+}
